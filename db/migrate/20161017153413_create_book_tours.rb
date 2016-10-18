@@ -5,7 +5,7 @@ class CreateBookTours < ActiveRecord::Migration[5.0]
       t.references :tour, index: true, foreign_key: true
       t.integer :people_number
       t.string :requirement
-      t.boolean :is_pay
+      t.boolean :is_pay, default: false
 
       t.timestamps
     end

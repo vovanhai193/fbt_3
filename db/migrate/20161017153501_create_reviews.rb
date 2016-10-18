@@ -5,7 +5,7 @@ class CreateReviews < ActiveRecord::Migration[5.0]
       t.references :category_review, index: true, foreign_key: true
       t.string :title
       t.string :content
-      t.boolean :is_confirm
+      t.boolean :is_confirm, default: false
       t.attachment :image
 
       t.timestamps
