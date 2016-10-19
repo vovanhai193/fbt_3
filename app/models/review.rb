@@ -1,4 +1,5 @@
 class Review < ApplicationRecord
+  include CustomOrder
   belongs_to :user
   belongs_to :category_review
 
@@ -8,6 +9,6 @@ class Review < ApplicationRecord
   validates :title, presence: true, length: {maximum: 100}
   validates :content, presence: true
 
-  has_attached_file :image, styles: {small: "64x64", med: "100x100", large: "200x200"}
+  has_attached_file :image, styles: {small: "64x64", med: "100x100", large: "300x300"}
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 end

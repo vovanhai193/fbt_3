@@ -5,6 +5,9 @@ Config.setup do |config|
   # Ability to remove elements of the array set in earlier loaded settings file. For example value: '--'.
   #
   # config.knockout_prefix = nil
+  # Overwrite arrays found in previously loaded settings file. When set to `false`, arrays will be merged.
+  #
+  # config.overwrite_arrays = true
 
   # Load environment variables from the `ENV` object and override any settings defined in files.
   #
@@ -29,4 +32,9 @@ Config.setup do |config|
   # Parse numeric values as integers instead of strings.
   #
   # config.env_parse_values = false
+  # config.env_converter = :downcase
+
+  # Parse numeric values as integers instead of strings.
+  #
+  # config.env_parse_values = true
 end
