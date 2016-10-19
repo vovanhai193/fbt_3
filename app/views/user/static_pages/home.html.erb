@@ -1,0 +1,284 @@
+<!--header start here-->
+<div class="banner">
+  <div class="header">
+    <div class="container">
+      <div class="header-main">
+        <div class="logo wow bounceInLeft" data-wow-delay="0.3s">
+          <%= link_to image_tag("logo1.png"), "#" %>
+        </div>
+        <div class="top-navg">
+          <span class="menu"><%= image_tag "icon.png" %></span>
+          <nav class="cl-effect-13">
+            <ul class="res">
+              <li><%= link_to t("home"), "#", class: "active" %></li>
+              <li><%= link_to t("tour"), "#" %></li>
+              <li class="dropdown">
+                <%= link_to "#", {class: "dropdown-toggle",
+                  "data-toggle": "dropdown"} do %>
+                  <%= t "service" %>
+                  <b class="caret"></b>
+                <% end %>
+                <ul class="dropdown-menu background" role="menu">
+                  <li><%= link_to t("food"), "#" %></li>
+                  <li><%= link_to t("hotel"), "#" %></li>
+                  <li><%= link_to t("new"), "#" %></li>
+                </ul>
+              </li>
+              <li><%= link_to t("sign_in"), "#" %></li>
+              <li><%= link_to t("sign_up"), "#" %></li>
+            </ul>
+          </nav>
+        </div>
+      <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+  <div class="banner-main">
+    <div class="slider-bann wow bounceInRight" data-wow-delay="0.3s">
+      <ul class="rslides" id="slider2">
+        <li>
+          <h3><%= t "welcome_travel" %></h3>
+          <h4><%= t "welcome_travel_desc" %></h4>
+        </li>
+        <li>
+          <h3><%= t "welcome_travel_2" %></h3>
+          <h4><%= t "welcome_travel_desc" %></h4>
+        </li>
+        <li>
+          <h3><%= t "welcome_travel_3" %></h3>
+          <h4><%= t "welcome_travel_desc" %></h4>
+          <div class="ban-btn">
+            <%= link_to t("read_more"), "#",class: "hvr-bounce-out" %>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--header end here-->
+<!--visit places strat here-->
+<div class="visit">
+  <div class="container">
+    <div class="visit-main wow bounceInRight" data-wow-delay="0.3s">
+        <div class="visit-top">
+          <h3><%= t "visit_place" %></h3>
+          <span class="lft-bar-visit"> </span>
+          <span class="rit-bar-visit"> </span>
+        </div>
+        <div class="visit-bottom">
+          <div class="col-md-4 visit-grid">
+            <div class="item-1 item-type-spin">
+              <%= link_to "#", class: "item-hover swipebox",
+                data: {title: "Vigor"} do %>
+                <div class="item-info">
+                  <div class="headline">
+                    <%= t "visit_place" %>
+                    <div class="line"></div>
+                    <div class="date"><%= t("date_example1") %></div>
+                  </div>
+                </div>
+                <div class="mask"></div>
+              <% end %>
+              <div class="item-img">
+                <%= image_tag "v1.jpg", class: "img-responsive" %>
+              </div>
+            </div>
+            <h4><%= link_to t("temporibus"), "#" %></h4>
+            <p><%= t("travel_reason") %></p>
+            <div class="visit-blog">
+              <div class="visit-btn">
+                <%= link_to t("read_more"), "#" %></a>
+              </div>
+              <div class="visit-likes">
+                <%= link_to "#" do %>
+                  <span class="#"><%= t "title_2k" %></span>
+                <% end %>
+              </div>
+              <div class="clearfix"> </div>
+            </div>
+          </div>
+        <div class="col-md-4 visit-grid">
+          <div class="item-1 item-type-spin">
+            <%= link_to "#", class: "item-hover swipebox",
+              data: {title: "Vigor"} do %>
+              <div class="item-info">
+                <div class="headline">
+                  <h3><%= t "visit_tour" %></h3>
+                  <div class="line"></div>
+                  <div class="date"><%= t("date_example1") %></div>
+                </div>
+              </div>
+              <div class="mask"></div>
+            <% end %>
+            <div class="item-img">
+              <%= image_tag "v2.jpg", class: "img-responsive" %>
+            </div>
+          </div>
+            <h4><%= link_to t("temporibus"), "#" %></h4>
+            <p><%= t "travel_reason" %></p>
+            <div class="visit-blog">
+              <div class="visit-btn">
+                <%= link_to t("read_more"), "#" %>
+              </div>
+              <div class="visit-likes">
+                <%= link_to t("title_2k"), "#" %>
+              </div>
+              <div class="clearfix"> </div>
+            </div>
+          </div>
+          <div class="col-md-4 visit-grid">
+            <div class="item-1  item-type-spin">
+              <%= link_to "#", class: "item-hover swipebox",
+                data: {title: "Vigor"} do %>
+                <div class="item-info">
+                  <div class="headline">
+                    <%= t "visit_tour" %>
+                    <div class="line"></div>
+                    <div class="date"><%= t("date_example1") %></div>
+                  </div>
+                </div>
+                <div class="mask"></div>
+              <% end %>
+              <div class="item-img">
+                <%= image_tag "v3.jpg", class: "img-responsive" %>
+              </div>
+            </div>
+            <h4><%= link_to t("temporibus"), "#" %></h4>
+            <p><%= t("travel_reason") %></p>
+            <div class="visit-blog">
+              <div class="visit-btn">
+                <%= link_to t("read_more"), "#" %>
+              </div>
+              <div class="visit-likes">
+                <%= link_to t("title_2k"), "#" %>
+              </div>
+              <div class="clearfix"> </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--what we do strat here-->
+<div class="what-we-do">
+  <div class="container">
+    <div class="people-top  wow bounceInLeft" data-wow-delay="0.3s">
+      <h1><%= t "about_us" %></h1>
+      <span class="lft-bar-we"> </span>
+      <span class="rit-bar-we"> </span>
+      <p><%= t "travel_invite" %></p>
+      <%= link_to t("read_more"), "#", class: "hvr-bounce-out" %>
+      <div class="clearfix"> </div>
+    </div>
+ </div>
+</div>
+<!--what we do end here-->
+<!--contact -->
+<div  class="contact">
+  <div class="container">
+    <div class="contact-main">
+      <div class="contact-top">
+        <h1><%= t("contact_title") %></h1>
+        <span class="lft-bar-contact"></span>
+        <span class="rit-bar-contact"></span>
+      </div>
+      <div class="contact-bottom">
+        <div class="col-md-6 col-md-offset-3
+          contact-left wow bounceInLeft data-wow-delay="0.3s">
+<!--contact-form-->
+          <form>
+            <p class="your-para"><%= t("your_name_label") %></p>
+            <input type="text" value="" onfocus="this.value='';"
+              onblur="if (this.value == '') {this.value ='';}">
+            <p class="your-para"><%= t("your_email_label") %></p>
+            <input type="text" value="" onfocus="this.value='';"
+              onblur="if (this.value == '') {this.value ='';}">
+            <p class="your-para"><%= t("your_message_label") %></p>
+            <textarea cols="77" rows="6" onfocus="this.value='';"
+              onblur="if (this.value == '') {this.value = '';}">
+            </textarea>
+            <ul class="actions">
+              <li><input type="submit" class="style1" value="Send" /></li>
+            </ul>
+          </form>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--footer start here-->
+<div class="map">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.182370726!2d-0.10159865000000001!3d51.52864165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C+UK!5e0!3m2!1sen!2sin!4v1431577187804"></iframe>
+  <div class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="col-md-4 ftr-grids  wow bounceIn" data-wow-delay="0.4s">
+          <h4><%= t "get_in_touch" %></h4>
+          <ul class="get-touch">
+            <li><span class="share"></span>
+              <%= link_to t("tempor_incididunt_ut_labore_et_dolore"), "#" %></li>
+            <li><span class="email"></span>
+              <%= link_to t("email"), "#" %>
+            <li><span class="phone">
+              </span><%= t "phone2" %> </li>
+          </ul>
+        </div>
+        <div class="col-md-4 ftr-grids  wow bounceIn" data-wow-delay="0.4s">
+          <h4><%= t "follow_us_title" %></h4>
+        </div>
+        <div class="col-md-4 ftr-grids  wow bounceIn" data-wow-delay="0.4s">
+          <h4><%= t "popular_posts_title" %></h4>
+          <div class="ftr-last">
+            <div class="ftr-month">
+              <h6><%= t "january_title" %></h6>
+            </div>
+            <div class="ftr-like">
+              <h6><%= t "likes_3" %></h6>
+            </div>
+            <div class="clearfix"> </div>
+          </div>
+          <p><%= t "lorem_month" %></p>
+          <div class="ftr-last">
+            <div class="ftr-month">
+              <h6><%= t "february" %></h6>
+            </div>
+            <div class="ftr-like">
+              <h6><%= t "likes_5" %></h6>
+            </div>
+            <div class="clearfix"> </div>
+          </div>
+          <p><%= t "lorem_month" %></p>
+          <div class="ftr-last">
+            <div class="ftr-month">
+              <h6><%= t "march" %></h6>
+            </div>
+            <div class="ftr-like">
+              <h6><%= t "likes_2" %></h6>
+            </div>
+            <div class="clearfix"> </div>
+          </div>
+          <p><%= t "lorem_month" %></p>
+          <div class="ftr-last">
+            <div class="ftr-month">
+              <h6><%= t "april" %></h6>
+            </div>
+            <div class="ftr-like">
+              <h6><%= t "likes_7" %></h6>
+            </div>
+            <div class="clearfix"> </div>
+          </div>
+          <p><%= t "lorem_month" %></p>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--footer end here-->
+<div class="copy-right wow bounceInLeft" data-wow-delay="0.3s">
+  <h3><%= t "framgia_book_tour" %></h3>
+</div>
