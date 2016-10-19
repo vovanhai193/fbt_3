@@ -19,6 +19,7 @@ gem "wow-rails"
 gem "animate-rails"
 gem "will_paginate", "3.1.0"
 gem "bootstrap-will_paginate", "0.0.10"
+gem "cancancan", "~> 1.10"
 
 group :development, :test do
   gem "byebug", platform: :mri
