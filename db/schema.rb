@@ -35,21 +35,21 @@ ActiveRecord::Schema.define(version: 20161017153957) do
     t.integer  "tour_id"
     t.integer  "people_number"
     t.string   "requirement"
-    t.boolean  "is_pay"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.boolean  "is_pay",        default: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
     t.index ["tour_id"], name: "index_book_tours_on_tour_id"
     t.index ["user_id"], name: "index_book_tours_on_user_id"
   end
 
   create_table "category_reviews", force: :cascade do |t|
-    t.string   "type"
+    t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "category_tours", force: :cascade do |t|
-    t.string   "type"
+    t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -99,13 +99,13 @@ ActiveRecord::Schema.define(version: 20161017153957) do
     t.integer  "category_review_id"
     t.string   "title"
     t.string   "content"
-    t.boolean  "is_confirm"
+    t.boolean  "is_confirm",         default: false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.index ["category_review_id"], name: "index_reviews_on_category_review_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
@@ -128,13 +128,13 @@ ActiveRecord::Schema.define(version: 20161017153957) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",               default: "", null: false
-    t.string   "encrypted_password",  default: "", null: false
+    t.string   "email",               default: "",    null: false
+    t.string   "encrypted_password",  default: "",    null: false
     t.string   "name"
-    t.boolean  "is_admin"
+    t.boolean  "is_admin",            default: false
     t.datetime "remember_created_at"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

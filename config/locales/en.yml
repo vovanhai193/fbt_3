@@ -28,3 +28,8 @@ en:
     contact: "Contact"
   greeting: "Hello buddy!"
   admin: "Admin"
+  hello: "Hello world"
+  tours: "Tours list"
+  all: "All"
+  filter: "Filter"
+  no_items_found: "No items found"

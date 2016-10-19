@@ -1,0 +1,31 @@
+<title><%= t "tours" %></title>
+<%= form_for tours_path, method: :get do |f| %>
+  <div class="row">
+    <div class="col-md-4">
+      <%= select_tag :category_tour_id,
+        options_from_collection_for_select(@categories, :id, :title,
+          params[:category_tour_id]), include_blank: t(:all),
+            class: "form-control" %>
+    </div>
+    <div class="col-md-5">
+      <%= text_field_tag :text %>
+    </div>
+    <div class="col-md-2">
+      <%= f.submit t(:filter), class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
+<hr/>
+<h3><%= t "tours_list" %></h3>
+<div id="tours">
+  <% if @tours.any? %>
+    <ul class="tours">
+      <%= render @tours %>
+    </ul>
+    <div class="text-center">
+      <%= will_paginate %>
+    </div>
+  <% else %>
+    <%= t "no_items_found" %>
+  <% end %>
+</div>
