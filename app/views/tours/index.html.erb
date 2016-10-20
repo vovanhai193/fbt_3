@@ -1,0 +1,37 @@
+<div class="gallery">
+  <div class="container">
+    <div class="galley-grid wow bounceInLeft" data-wow-delay="0.3s">
+      <h1><%= t "tour.list" %></h1>
+      <span class="lft-bar-gallery"> </span>
+      <span class="rit-bar-gallery"> </span>
+    </div>
+    <div>
+      <%= search_form_for @q, method: :get do |f| %>
+        <div class="row">
+          <div class="col-md-4">
+            <%= f.select :category_tour_id_eq,
+              options_from_collection_for_select(@categories, :id, :title),
+              include_blank: t("all"), class: "form-control" %>
+          </div>
+          <div class="col-md-5">
+            <%= f.search_field :name_or_schedule_cont,
+            class: "form-control" %>
+          </div>
+          <div class="col-md-2">
+            <%= f.submit t(:filter), class: "btn btn-primary" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <hr/>
+    <% if @tours.any? %>
+      <div class="project-top wow fadeInUp animated" data-wow-delay=".5s">
+        <%= render @tours %>
+        <div class="clearfix"> </div>
+        <div class="text-center">
+          <%= will_paginate %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -77,3 +77,10 @@ en:
   tempor_incididunt_ut_labore_et_dolore: "Tempor incididunt ut labore et dolore"
   email: "Thaophan961@gmail.com"
   framgia_book_tour: "Framgia book tour"
+  tours: "Tours list"
+  all: "All"
+  filter: "Filter"
+  no_items_found: "No items found"
+  tour:
+    not_found: "Tour not found"
+    list: "Tours list"

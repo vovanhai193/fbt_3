@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     root "users#index", as: "root"
     resources :users, only: [:index, :destroy]
   end
+  resources :tours, only: [:index, :show]
 end
