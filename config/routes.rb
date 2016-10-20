@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  namespace :user do
-    get "static_pages/home"
-  end
+  root "static_pages#home"
 
   devise_for :users
   namespace :admin do
