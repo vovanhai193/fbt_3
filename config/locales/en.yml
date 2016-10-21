@@ -108,3 +108,4 @@ en:
   book_tour:
     not_found: "Not found"
     failed: "Book tour failed"
+  submit: "Submit"
