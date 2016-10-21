@@ -1,13 +1,68 @@
 <title><%= @tour.name %></title>
-<div class="row">
-  <h1><%= @tour.name %></h1>
-  <%= @tour.schedule %>
-  <%= @tour.place_departure %>
-  <%= @tour.time %>
-  <%= @tour.people_number %>
-  <%= @tour.transport %>
-  <%= @tour.price %>
-  <%= @tour.content %>
-  <%= @tour.time_start %>
-  <%= @tour.rating %>
+<div class="single">
+  <div class="container">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <%= image_tag "01.jpg" %>
+      </div>
+      <div class="item">
+        <%= image_tag "01.jpg" %>
+      </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel"
+      role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true">
+      </span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel"
+      role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true">
+      </span>
+    </a>
+  </div>
+    <div class="single-top wow bounceInLeft" data-wow-delay="0.3s">
+      <div class="lone-line">
+        <h4><%= @tour.name %></h4>
+        <ul class="grid-blog">
+          <li><span><i class="glyphicon glyphicon-time"> </i>
+            <%= t "tour.time" %>
+            <%= @tour.time %></span>
+          </li>
+          <li><span><i class="glyphicon glyphicon-plane"></i>
+            <%= t "tour.transport" %>
+            <%= @tour.transport %></span>
+          </li>
+          <li><span><i class="glyphicon glyphicon-home"></i>
+            <%= t "tour.place_departure" %>
+            <%= @tour.place_departure %></span>
+          </li>
+          <li><span><i class="glyphicon glyphicon-play-circle"></i>
+            <%= t "tour.time_start" %>
+            <%= @tour.time_start %></span>
+          </li>
+        </ul>
+        <div class="pull-right">
+          <%= link_to new_book_tour_path(tour_id: @tour.id),
+            class: "btn btn-primary" do %>
+            <span class="glyphicon glyphicon-shopping-cart"></span>
+            <%= t :Book_tour %>
+          <% end %>
+       </div>
+        <h3><%= t "tour.schedule" %><%= @tour.schedule %></h3>
+        <h2><%= t "tour.price" %><%= @tour.price.to_i %>
+          <%= t "tour.usd" %>
+        </h2>
+        <p class="wow fadeInLeft animated" data-wow-delay=".5s">
+          <%= @tour.content %>
+        </p>
+      </div>
+    </div>
+  </div>
 </div>

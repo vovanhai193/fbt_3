@@ -1,0 +1,18 @@
+<h1><%= t "book_tour.book" %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @book_tour do |f| %>
+      <%= f.hidden_field :tour_id, value: @tour.id %>
+      <div class="form-group">
+        <%= f.label :people_number %>
+        <%= f.text_field :people_number, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :requirement %>
+        <%= f.text_area :requirement, class: "form-control" %>
+      </div>
+      <%= f.submit t(:book), class: "btn btn-primary" %>
+    <% end %>
+    <br>
+  </div>
+</div>

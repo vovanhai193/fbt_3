@@ -5,7 +5,7 @@
   <div class="projectInfo">
     <div class="clearfix"> </div>
     <h4><%= link_to tour.name, tour %></h4>
-    <h4><%= tour.price %></h4>
+    <h4><%= number_to_currency tour.price %></h4>
     <p><%= tour.schedule %></p>
   </div>
 </div>
