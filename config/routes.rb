@@ -10,4 +10,5 @@ Rails.application.routes.draw do
     resources :users, only: [:index, :destroy]
   end
   resources :tours, only: [:index, :show]
+  resources :book_tours
 end
