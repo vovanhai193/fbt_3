@@ -1,0 +1,21 @@
+<form>
+  <%= form_for @review do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :content %>
+    <div class="col-sm-8">
+    <%= f.cktext_area :content, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :category_review %>
+    <%= f.collection_select :category_review_id, @categories, :id, :title,
+      include_blank: true %>
+  </div>
+  <%= f.submit class: "btn btn-default" %>
+    <% end %>
+  </div>
+</form>

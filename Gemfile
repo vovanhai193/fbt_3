@@ -11,7 +11,6 @@ gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
 gem "devise"
 gem "paperclip", "~>5.1"
-gem "simple_form"
 gem "devise-bootstrapped"
 gem "bootstrap-sass", "~> 3.3.6"
 gem "owlcarousel-rails"
@@ -26,7 +25,10 @@ gem "bootstrap-will_paginate", "0.0.10"
 gem "config"
 gem "ransack"
 gem "omniauth-facebook"
-
+gem "ckeditor"
+gem "simple_form"
+gem "pry-byebug"
+gem "pry-rails"
 group :development, :test do
   gem "byebug", platform: :mri
 end

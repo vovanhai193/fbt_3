@@ -1,0 +1,19 @@
+<div class="gallery">
+  <div class="container">
+    <div class="galley-grid wow bounceInLeft" data-wow-delay="0.3s">
+      <h1><%= t "review.list" %></h1>
+      <span class="lft-bar-gallery"> </span>
+      <span class="rit-bar-gallery"> </span>
+    </div>
+    <hr/>
+    <% if @reviews.any? %>
+      <div class="project-top wow fadeInUp animated" data-wow-delay=".5s">
+        <%= render @reviews %>
+        <div class="clearfix"> </div>
+        <div class="text-center">
+          <%= will_paginate %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

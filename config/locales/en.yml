@@ -86,3 +86,13 @@ en:
   tour:
     not_found: "Tour not found"
     list: "Tours list"
+  review:
+    create_successfull: "Review created successfully!"
+    update_successfull: "Review updated successfully!"
+    delete_successfull: "Review deleted successfully"
+    delete_error: "Review delete error"
+    update_error: "Review update error"
+    not_found: "Review not found"
+    create: "Create review"
+    edit: "Edit review"
+    list: "List reviews"
