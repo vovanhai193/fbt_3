@@ -81,6 +81,8 @@ en:
   all: "All"
   filter: "Filter"
   no_items_found: "No items found"
+  sign_out: "Sign out"
+  sign_in_with_fb: "Sign in with Facebook"
   tour:
     not_found: "Tour not found"
     list: "Tours list"
