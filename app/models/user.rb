@@ -9,6 +9,10 @@ class User < ApplicationRecord
   has_many :ratings, dependent: :destroy
   has_many :reviews, dependent: :destroy
 
+  def likes? review
+    review.likes.where(user_id: id).any?
+  end
+
   class << self
     def from_omniauth access_token
       data = access_token.info
