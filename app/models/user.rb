@@ -25,4 +25,11 @@ class User < ApplicationRecord
       user
     end
   end
+  mount_uploader :avatar, AvatarUploader
+
+  scope :alphabet, ->{order :name}
+
+  def is_user? user
+    user == self
+  end
 end
