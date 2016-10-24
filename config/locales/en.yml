@@ -109,3 +109,5 @@ en:
     not_found: "Not found"
     failed: "Book tour failed"
   submit: "Submit"
+  like: "Like"
+  unlike: "Unlike"
