@@ -7,8 +7,8 @@ Rails.application.routes.draw do
     resource :like
   end
   namespace :admin do
-    root "users#index", as: "root"
-    resources :users, only: [:index, :destroy]
+    root "users#index", path: "/"
+    resources :users, only: [:index, :show, :destroy]
   end
   resources :tours, only: [:index, :show]
   resources :book_tours
