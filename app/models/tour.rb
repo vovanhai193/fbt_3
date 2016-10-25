@@ -1,4 +1,5 @@
 class Tour < ApplicationRecord
+  ratyrate_rateable "rating"
   belongs_to :category_tour
 
   has_many :book_tours

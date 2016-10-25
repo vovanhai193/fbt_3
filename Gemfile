@@ -28,7 +28,8 @@ gem "simple_form"
 gem "pry-byebug"
 gem "pry-rails"
 gem "carrierwave"
-
+gem 'ratyrate', :github => 'wazery/ratyrate'
+gem 'jquery-turbolinks'
 group :development, :test do
   gem "byebug", platform: :mri
 end
